@@ -4,10 +4,10 @@ using t = size_t;
 int main()
 {
     t cntr = 0;
-    t a = 0;
-    while (std::cin >> a)
+    t current = 0;
+    while (std::cin >> current)
     {
-        cntr++;
+        cntr += current * current;
     }
     if (std::cin.eof())
     {
