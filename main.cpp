@@ -11,6 +11,7 @@ int main()
     t cntr = 0;
 
     t current = 0, b = 0, c = 0;
+    std::cin >> c >> b;
     while (std::cin >> current)
     {
         cntr += isPyth(c, b, current);
