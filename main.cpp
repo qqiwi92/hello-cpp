@@ -5,22 +5,21 @@ int main()
 {
     t cntr = 0;
     t a = 0;
-    while (true)
+    while (std::cin >> a)
     {
-
-        std::cin >> a;
-        if (std::cin.eof())
-        {
-            std::cout << cntr << "\n";
-        }
-        else if (std::cin.fail())
-        {
-            std::cerr << "Error\n";
-            return 1;
-        }
-        else
-        {
-            cntr++;
-        }
+        cntr++;
+    }
+    if (std::cin.eof())
+    {
+        std::cout << cntr << "\n";
+    }
+    else if (std::cin.fail())
+    {
+        std::cerr << "Error\n";
+        return 1;
+    }
+    else
+    {
+        std::cout << cntr << "\n";
     }
 }
