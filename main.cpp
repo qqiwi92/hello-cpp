@@ -1,6 +1,29 @@
 #include <iostream>
-
+#include <limits>
 using t = size_t;
+
+t get_max_boundary()
+{
+    return std::numeric_limits<t>::max();
+}
+
+t multiply(t a, t b)
+{
+    if (a > get_max_boundary() / b)
+    {
+        throw std::overflow_error("max overflow");
+        return 0;
+    }
+    return a * b;
+}
+t sum(t a, t b)
+{
+    if (a > get_max_boundary() - b) {
+        throw std::overflow_error("max overflow");
+        return 0;
+    }
+    return a + b;
+}
 
 bool isPyth(const t a, const t b, const t c)
 {
